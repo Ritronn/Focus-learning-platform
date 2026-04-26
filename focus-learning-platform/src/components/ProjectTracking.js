@@ -3,13 +3,12 @@ import { Code, Clock, GitBranch, FileCode, Zap, RefreshCw } from 'lucide-react';
 import vscodeService from '../services/vscodeService';
 
 const ProjectTracking = () => {
-  const [projects, setProjects] = useState([]);
   const [vsCodeProjects, setVSCodeProjects] = useState([]);
 
   // Load VS Code projects only once on mount
   useEffect(() => {
     const loadVSCodeProjects = async () => {
-      const hasData = await vscodeService.loadFromStorage();
+      await vscodeService.loadFromStorage();
       const vscodeProjects = vscodeService.getProjects();
       setVSCodeProjects(vscodeProjects);
     };
@@ -19,7 +18,7 @@ const ProjectTracking = () => {
 
   // Manual refresh function
   const refreshVSCodeData = async () => {
-    const hasData = await vscodeService.loadFromStorage();
+    await vscodeService.loadFromStorage();
     const vscodeProjects = vscodeService.getProjects();
     setVSCodeProjects(vscodeProjects);
   };

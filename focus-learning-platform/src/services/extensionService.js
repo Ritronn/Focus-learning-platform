@@ -1,4 +1,3 @@
-/* global chrome */
 // Browser Extension Communication Service
 class ExtensionService {
   constructor() {
@@ -63,4 +62,5 @@ class ExtensionService {
   }
 }
 
-export default new ExtensionService();
+const extensionServiceInstance = new ExtensionService();
+export default extensionServiceInstance;

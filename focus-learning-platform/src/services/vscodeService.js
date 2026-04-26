@@ -156,4 +156,5 @@ class VSCodeService {
   }
 }
 
-export default new VSCodeService();
+const vscodeServiceInstance = new VSCodeService();
+export default vscodeServiceInstance;

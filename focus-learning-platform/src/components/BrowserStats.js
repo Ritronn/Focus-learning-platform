@@ -27,13 +27,6 @@ const BrowserStats = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const resetSession = async () => {
-    const success = await extensionService.resetSession();
-    if (success) {
-      loadStats();
-    }
-  };
-
   const getScoreColor = (score) => {
     if (score >= 80) return 'text-green-600 bg-green-100';
     if (score >= 60) return 'text-yellow-600 bg-yellow-100';

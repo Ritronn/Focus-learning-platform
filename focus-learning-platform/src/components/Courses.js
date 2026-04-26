@@ -312,7 +312,7 @@ person = {
                 <h3 className="font-semibold text-blue-800 mb-4">Interactive Challenge</h3>
                 <p className="text-blue-700 mb-4">{currentLesson.content.interactive.challenge}</p>
                 <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm">
-                  <div className="text-gray-400 mb-2">// Your solution:</div>
+                  <div className="text-gray-400 mb-2">{'// Your solution:'}</div>
                   <pre>{currentLesson.content.interactive.solution}</pre>
                 </div>
               </div>
